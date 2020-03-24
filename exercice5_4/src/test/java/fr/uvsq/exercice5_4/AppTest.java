@@ -1,38 +1,32 @@
 package fr.uvsq.exercice5_4;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import static org.junit.Assert.assertTrue;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+import org.junit.*;
+
 
 /**
  * Unit test for simple App.
  */
 public class AppTest 
-    extends TestCase
+   
 {
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
+    @Test
+    public void testApp() throws IOException
     {
-        super( testName );
-    }
+    	Personnel p1= new Personnel.Builder(0, "aa", "jj",LocalDate.parse("1997-08-01",DateTimeFormatter.ISO_DATE)).build();
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
+    	
+    	FileOutputStream fout = new FileOutputStream("data.ser") ;
+    	ObjectOutputStream out = new ObjectOutputStream(fout) ;
+    	out.writeObject(p1) ; 
+    	out.close() ;
+        
     }
 }
