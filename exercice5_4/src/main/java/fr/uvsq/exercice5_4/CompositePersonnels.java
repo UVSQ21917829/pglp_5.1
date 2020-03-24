@@ -1,11 +1,16 @@
 package fr.uvsq.exercice5_4;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class CompositePersonnels implements InterfacePersonnel {
-    int id;
+public class CompositePersonnels implements InterfacePersonnel, Serializable {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	int id;
 	List<InterfacePersonnel> listperso= new ArrayList<InterfacePersonnel>();
 	public void print() {
 		// TODO Auto-generated method stub

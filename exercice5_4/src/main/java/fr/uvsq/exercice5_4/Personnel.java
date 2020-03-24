@@ -1,10 +1,15 @@
 package fr.uvsq.exercice5_4;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public final class Personnel implements InterfacePersonnel {
+public final class Personnel implements InterfacePersonnel, Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	//parametres obligatoires
     private int id;
     private String nom;

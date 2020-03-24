@@ -1,9 +1,14 @@
 package fr.uvsq.exercice5_4;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class AffichageParGroup {
-    private ArrayList list;
+public class AffichageParGroup implements Serializable{
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private ArrayList list;
     
    public void afficheGroupe() {
 	   
