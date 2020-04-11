@@ -42,8 +42,7 @@ public class AppTest
     	FileOutputStream fout = new FileOutputStream("compo.ser") ;
     	ObjectOutputStream out = new ObjectOutputStream(fout) ;
     	out.writeObject(groupe1) ; 
-    	out.close();
-    	
+    	out.close();	
         
     }
     @Test
