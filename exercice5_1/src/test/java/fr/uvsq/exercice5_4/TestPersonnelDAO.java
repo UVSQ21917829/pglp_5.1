@@ -26,7 +26,9 @@ public class TestPersonnelDAO {
 		Personnel p2;
 		p2=perDAO.read(13);
 		assertTrue(p2.getId()==13);
-
+		
+		
+		
 	}
 
 }
