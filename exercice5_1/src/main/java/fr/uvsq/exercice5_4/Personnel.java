@@ -73,5 +73,11 @@ public final class Personnel implements InterfacePersonnel, Serializable {
 	}
 
 
+
+	public Integer getId() {
+		return id;
+	}
+
+
 }
 
