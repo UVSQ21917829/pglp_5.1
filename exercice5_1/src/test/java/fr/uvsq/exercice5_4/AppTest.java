@@ -46,5 +46,20 @@ public class AppTest
     	
         
     }
+    @Test
+    public void testSerializableAffichParGroup() throws IOException
+    {
+    	Personnel p1= new Personnel.Builder(1, "aa", "jj",LocalDate.parse("1997-08-01",DateTimeFormatter.ISO_DATE)).build();
+    	CompositePersonnels groupe1 = new CompositePersonnels(1);
+    	CompositePersonnels groupe2 = new CompositePersonnels(3);
+    	groupe1.addPersonnel(p1);
+    	groupe1.addPersonnel(groupe2);  
+    	AffichageParGroup affichage = new AffichageParGroup(groupe1);
+    	FileOutputStream fout = new FileOutputStream("aff.ser") ;
+    	ObjectOutputStream out = new ObjectOutputStream(fout) ;
+    	out.writeObject(affichage); 
+    	out.close() ;
+    	
+    }
    
 }
