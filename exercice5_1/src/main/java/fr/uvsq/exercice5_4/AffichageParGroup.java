@@ -3,9 +3,12 @@ package fr.uvsq.exercice5_4;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-@SuppressWarnings("serial")
 public class AffichageParGroup implements Serializable {
     
+/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 public ArrayList<InterfacePersonnel> list =new ArrayList<InterfacePersonnel>();
 
 	public AffichageParGroup (InterfacePersonnel interfacePersonnel) {

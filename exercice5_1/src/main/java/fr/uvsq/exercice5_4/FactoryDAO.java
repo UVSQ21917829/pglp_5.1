@@ -11,7 +11,7 @@ public class FactoryDAO {
 
     public static DAO<Personnel> getPersonnelDAO(){
 
-        return new personnelDAO();
+        return new PersonnelDAO();
     }
 
 }

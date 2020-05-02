@@ -12,7 +12,7 @@ public class TestPersonnelDAO {
 
 	@Test
 	public void testcreate() throws IOException {
-		personnelDAO perDAO = new personnelDAO();
+		DAO<Personnel> perDAO =FactoryDAO.getPersonnelDAO();
 		Personnel p1= new Personnel.Builder(12, "aa", "jj",LocalDate.parse("1997-08-01",DateTimeFormatter.ISO_DATE)).build();
 		perDAO.create(p1);
 		
@@ -20,7 +20,7 @@ public class TestPersonnelDAO {
 	}
 	@Test
 	public void testRead() throws IOException, ClassNotFoundException {
-		personnelDAO perDAO = new personnelDAO();
+		DAO<Personnel> perDAO = FactoryDAO.getPersonnelDAO();
 		Personnel p1= new Personnel.Builder(13, "aa", "jj",LocalDate.parse("1997-08-01",DateTimeFormatter.ISO_DATE)).build();
 		perDAO.create(p1);
 		Personnel p2;

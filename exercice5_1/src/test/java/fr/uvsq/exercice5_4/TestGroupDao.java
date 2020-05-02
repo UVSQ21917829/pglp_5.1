@@ -13,7 +13,7 @@ public class TestGroupDao {
 	@Test
 	public void testCreat() throws IOException {
 		
-		GroupeDAO goupdao = new GroupeDAO();
+		DAO<CompositePersonnels> goupdao = FactoryDAO.getGroupeDAO();
 		Personnel p1= new Personnel.Builder(13, "aa", "jj",LocalDate.parse("1997-08-01",DateTimeFormatter.ISO_DATE)).build();
 		CompositePersonnels groupe= new CompositePersonnels(1);
 		groupe.addPersonnel(p1);
@@ -23,7 +23,7 @@ public class TestGroupDao {
 	@Test
 	public void testRead() throws IOException, ClassNotFoundException {
 		
-		GroupeDAO goupdao = new GroupeDAO();
+		DAO<CompositePersonnels> goupdao = FactoryDAO.getGroupeDAO();
 		CompositePersonnels p;
 		Personnel p1= new Personnel.Builder(13, "aa", "jj",LocalDate.parse("1997-08-01",DateTimeFormatter.ISO_DATE)).build();
 		CompositePersonnels groupe= new CompositePersonnels(2);
